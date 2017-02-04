@@ -23,6 +23,7 @@ public class Mark {
     private String user;
 
     @Column(name = "MAPdate", nullable = false)
+    @Temporal(TemporalType.TIMESTAMP)
     private Date Date;
 
     @Column(name = "price", nullable = false)
