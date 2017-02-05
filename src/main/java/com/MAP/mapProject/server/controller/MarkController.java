@@ -1,46 +1,65 @@
 package com.MAP.mapProject.server.controller;
 
 import com.MAP.mapProject.server.entity.Mark;
-import com.MAP.mapProject.server.repository.MarkRepository;
+import com.MAP.mapProject.server.service.MarkService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
-import java.util.Date;
 import java.util.List;
 
 @RestController
 @RequestMapping("/mark")
 public class MarkController {
 
-
     @Autowired
-    private MarkRepository markRepository;
+    private MarkService markService;
 
-    @RequestMapping(value="/get",method= RequestMethod.GET)
+    @RequestMapping(value="/getAll",method= RequestMethod.GET)
     @ResponseBody
-    public Mark getMarks(ModelMap model)
+    public List<Mark> getAllMarks()
     {
-        return createMockMark();
+        return markService.getAll();
     }
 
+    @RequestMapping(value="/{ID}",method= RequestMethod.GET)
+    @ResponseBody
+    public Mark getMarkById(@PathVariable("ID") long markID)
+    {
+        return markService.getByID(markID);
+    }
 
-    private Mark createMockMark() {
+    @RequestMapping(value="/save",method= RequestMethod.POST)
+    @ResponseBody
+    public Mark saveMark(@RequestBody Mark mark)
+    {
+        return markService.save(mark);
+    }
 
-        Mark mark = new Mark();
-        mark.setDate(new Date());
-        mark.setPrice(4);
-        mark.setId(1);
-        mark.setUser("user");
-        mark.setTitle("title");
-        mark.setText("txt");
-
-        List<Mark> all = markRepository.findAll();
-
-        return mark;
+    @RequestMapping(value="/delete/{ID}",method= RequestMethod.DELETE)
+    @ResponseBody
+    public void saveMark(@PathVariable("ID") int markID) {
+        markService.remove(markID);
     }
 
 }
+
+
+
+//@Autowired
+//    private MarkRepository markRepository;
+//
+//    @RequestMapping(value="/new",method= RequestMethod.GET)
+//    @ResponseBody
+//    public Mark newMark()
+//    {
+//        Mark x=new Mark();
+//        x.setText("text");
+//        x.setTitle("title");
+//        x.setPrice(4);
+//        x.setDate(new Date());
+//        x.setLat(54.1);
+//        x.setLng(54.3);
+//        x.setUser("user");
+//        x.setType("phot");
+//        return  markRepository.saveAndFlush(x);
+//    }

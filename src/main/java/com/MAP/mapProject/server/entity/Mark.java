@@ -19,15 +19,48 @@ public class Mark {
     @Column(name = "text", nullable = false)
     private String text;
 
-    @Column(name = "MAPuser", nullable = false)
-    private String user;
+    @Column(name = "userName", nullable = false)
+    private String UserName;
 
-    @Column(name = "MAPdate", nullable = false)
+    @Column(name = "datemark", nullable = false)
     @Temporal(TemporalType.TIMESTAMP)
     private Date Date;
 
     @Column(name = "price", nullable = false)
     private int price;
+
+    @Column(name = "lat", nullable = false)
+    private double lat;
+
+    public double getLat() {
+        return lat;
+    }
+
+    public void setLat(double lat) {
+        this.lat = lat;
+    }
+
+    public double getLng() {
+        return lng;
+    }
+
+    public void setLng(double lng) {
+        this.lng = lng;
+    }
+
+    @Column(name = "lng", nullable = false)
+    private double lng;
+
+    @Column(name = "type", nullable = false)
+    private String type;
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
 
     public String getText() {
         return text;
@@ -38,11 +71,11 @@ public class Mark {
     }
 
     public String getUser() {
-        return user;
+        return UserName;
     }
 
     public void setUser(String user) {
-        this.user = user;
+        this.UserName = user;
     }
 
     public int getPrice() {
