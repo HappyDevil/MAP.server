@@ -1,4 +1,4 @@
-package com.MAP.mapProject.server.entity;
+package com.mapProject.server.entity;
 
 import org.hibernate.annotations.GenericGenerator;
 
@@ -20,7 +20,7 @@ public class Mark {
     private String text;
 
     @Column(name = "userName", nullable = false)
-    private String UserName;
+    private String username;
 
     @Column(name = "datemark", nullable = false)
     @Temporal(TemporalType.TIMESTAMP)
@@ -71,11 +71,11 @@ public class Mark {
     }
 
     public String getUser() {
-        return UserName;
+        return username;
     }
 
     public void setUser(String user) {
-        this.UserName = user;
+        this.username = user;
     }
 
     public int getPrice() {

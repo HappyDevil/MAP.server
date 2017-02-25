@@ -1,4 +1,4 @@
-package com.MAP.mapProject.server.config;
+package com.mapProject.server.config;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.context.annotation.ComponentScan;
@@ -14,7 +14,7 @@ import java.util.List;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan("com.MAP.mapProject.server")
+@ComponentScan("com.mapProject.server")
 public class WebConfig extends WebMvcConfigurerAdapter {
 
     @Override

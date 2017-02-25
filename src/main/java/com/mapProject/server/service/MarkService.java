@@ -1,6 +1,6 @@
-package com.MAP.mapProject.server.service;
+package com.mapProject.server.service;
 
-import com.MAP.mapProject.server.entity.Mark;
+import com.mapProject.server.entity.Mark;
 
 import java.util.List;
 

@@ -1,20 +1,20 @@
-package com.MAP.mapProject.server.service;
+package com.mapProject.server.service;
 
 
-import com.MAP.mapProject.server.entity.Mark;
-import com.MAP.mapProject.server.repository.MarkRepository;
+import com.mapProject.server.entity.Mark;
+import com.mapProject.server.repository.MarkRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class ServiceImpl implements MarkService {
+public class MarkServiceImpl implements MarkService {
 
     @Autowired
     private MarkRepository markRepository;
 
-    public ServiceImpl() {
+    public MarkServiceImpl() {
     }
 
     public List<Mark> getAll() {

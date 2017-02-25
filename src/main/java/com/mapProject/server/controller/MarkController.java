@@ -1,7 +1,7 @@
-package com.MAP.mapProject.server.controller;
+package com.mapProject.server.controller;
 
-import com.MAP.mapProject.server.entity.Mark;
-import com.MAP.mapProject.server.service.MarkService;
+import com.mapProject.server.entity.Mark;
+import com.mapProject.server.service.MarkService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

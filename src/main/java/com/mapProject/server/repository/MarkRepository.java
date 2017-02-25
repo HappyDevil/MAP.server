@@ -1,6 +1,6 @@
-package com.MAP.mapProject.server.repository;
+package com.mapProject.server.repository;
 
-import com.MAP.mapProject.server.entity.Mark;
+import com.mapProject.server.entity.Mark;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 

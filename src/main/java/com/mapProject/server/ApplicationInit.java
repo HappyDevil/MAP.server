@@ -1,7 +1,7 @@
-package com.MAP.mapProject.server;
+package com.mapProject.server;
 
 
-import com.MAP.mapProject.server.config.WebConfig;
+import com.mapProject.server.config.WebConfig;
 import org.springframework.web.WebApplicationInitializer;
 import org.springframework.web.context.ContextLoaderListener;
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;

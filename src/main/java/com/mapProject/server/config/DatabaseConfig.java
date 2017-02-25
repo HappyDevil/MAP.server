@@ -1,4 +1,4 @@
-package com.MAP.mapProject.server.config;
+package com.mapProject.server.config;
 
 import org.apache.commons.dbcp2.BasicDataSource;
 import org.springframework.context.annotation.Bean;
@@ -20,10 +20,10 @@ import java.io.InputStream;
 import java.util.Properties;
 
 @Configuration
-@EnableJpaRepositories("com.MAP.mapProject.server.repository")
+@EnableJpaRepositories("com.mapProject.server.repository")
 @EnableTransactionManagement
 @PropertySource("classpath:db.properties")
-@ComponentScan("com.MAP.mapProject.server")
+@ComponentScan("com.mapProject.server")
 public class DatabaseConfig {
     @Resource
     private Environment env;
